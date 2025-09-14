@@ -17,60 +17,88 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:layout_weight="0.6">
 
             <ImageView
-                android:layout_margin="60dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:src="@drawable/infogram"/>
         </RelativeLayout>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_weight="0.4"
-            android:layout_marginLeft="@dimen/login_horizontalMargin"
-            android:layout_marginRight="@dimen/login_horizontalMargin">
-
-            <!-- Nombre de usuario -->
-            <com.google.android.material.textfield.TextInputLayout
+            android:fillViewport="true">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:boxBackgroundMode="none"
-                app:hintTextColor="@color/white">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/login_horizontalMargin"
+                android:layout_marginRight="@dimen/login_horizontalMargin">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <!-- Nombre de usuario -->
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/nombre_de_usuario"
-                    android:inputType="text"
-                    android:textColor="@color/white"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                    app:boxBackgroundMode="none"
+                    app:hintTextColor="@color/white">
 
-            <!-- Contraseña -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/login_MarginTop"
-                app:boxBackgroundMode="none"
-                app:hintTextColor="@color/white">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nombre_de_usuario"
+                        android:inputType="text"
+                        android:textColor="@color/white"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
+                <!-- Contraseña -->
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/contrasena"
-                    android:inputType="textPassword"
-                    android:textColor="@color/white"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_marginTop="@dimen/login_MarginTop"
+                    app:boxBackgroundMode="none"
+                    app:hintTextColor="@color/white">
 
-            <!-- Botón -->
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_text"
-                android:layout_marginTop="@dimen/login_MarginTop"/>
-        </LinearLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/contrasena"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Botón -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_text"
+                    android:layout_marginTop="@dimen/login_MarginTop"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tienes_una_cuenta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_tienes_una_cuenta"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textView_textSize"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crea_una_aqui"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/tienes_una_cuenta"
+                        android:textSize="@dimen/textView_textSize"
+                        android:onClick="goCreateAccount"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

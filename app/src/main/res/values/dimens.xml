@@ -3,4 +3,5 @@
     <dimen name="editText_textSize">20sp</dimen>
     <dimen name="login_horizontalMargin">40dp</dimen>
     <dimen name="login_MarginTop">20dp</dimen>
+    <dimen name="textView_textSize">18sp</dimen>
 </resources>

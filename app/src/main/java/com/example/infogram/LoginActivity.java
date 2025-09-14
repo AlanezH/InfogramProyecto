@@ -1,6 +1,7 @@
 package com.example.infogram;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +22,8 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
     }
+    public void goCreateAccount(View view){
+        System.out.println("--------------->go to create Account");
+    }
+
 }
