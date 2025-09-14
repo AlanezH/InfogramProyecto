@@ -4,7 +4,7 @@
         <!-- Primary brand color -->
         <item name="colorPrimary">#2196F3</item>
         <item name="colorPrimaryVariant">#1976D2</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">#FF4081</item>
 
         <!-- Secondary / Accent color -->
         <item name="colorSecondary">#FF4081</item>
@@ -14,6 +14,9 @@
         <!-- Status bar color -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="Theme.MaterialComponents.DayNight.DarkActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="editTextWhite" parent="Theme.MaterialComponents.DayNight">
         <item name="android:textSize">@dimen/editText_textSize</item>
         <item name="android:textColorHint">@color/editText_white</item>
@@ -27,7 +30,7 @@
         <item name="android:textColorHint">@color/editText_black</item>
         <item name="android:textColorPrimary">@color/editText_black</item>
         <item name="colorControlNormal">@color/editText_black</item>
-        <item name="colorControlActivated">@color/editText_black</item>
+        <item name="colorControlActivated">@color/editText_black  </item>
     </style>
     <style name="RaiseButtonDark" parent="Theme.MaterialComponents.DayNight">
         <item name="colorButtonNormal">@color/colorPrimaryDark</item>
