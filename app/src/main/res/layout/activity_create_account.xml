@@ -1,105 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".CreateAccountActivity">
 
+    <!-- Toolbar incluida -->
     <include layout="@layout/appbar_toolbar"/>
 
+    <!-- Contenedor Scroll para el formulario -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:padding="@dimen/padding_create_account"
-           android:orientation="vertical">
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               app:boxBackgroundMode="none"
-               app:hintTextColor="@color/black"
-               android:layout_marginTop="@dimen/marginTop_createAccount">
+        android:fillViewport="true"
+        android:layout_marginTop="?attr/actionBarSize">
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:hint="@string/correo"
-                   android:inputType="textEmailAddress"
-                   android:textColor="@color/black"/>
-           </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
+            <!-- Correo -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/editTexBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="none"
+                android:layout_marginTop="16dp">
 
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               app:boxBackgroundMode="none"
-               android:layout_marginTop="@dimen/marginTop_createAccount"
-               app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/editTexBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Correo"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:hint="@string/nombre"
-                   android:inputType="text"
-                   android:textColor="@color/black"/>
-           </com.google.android.material.textfield.TextInputLayout>
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               app:boxBackgroundMode="none"
-               android:layout_marginTop="@dimen/marginTop_createAccount"
-               app:hintTextColor="@color/white">
+            <!-- Nombre -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/editTexBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="none"
+                android:layout_marginTop="16dp">
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:hint="@string/usuario"
-                   android:inputType="text"
-                   android:textColor="@color/white"/>
-           </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/editTexBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Nombre"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-           <!-- Contraseña -->
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               app:boxBackgroundMode="none"
-               android:layout_marginTop="@dimen/marginTop_createAccount"
-               app:hintTextColor="@color/white">
+            <!-- Usuario -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/editTexBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="none"
+                android:layout_marginTop="16dp">
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:hint="@string/contrasena"
-                   android:inputType="textPassword"
-                   android:textColor="@color/white"/>
-           </com.google.android.material.textfield.TextInputLayout>
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               app:boxBackgroundMode="none"
-               android:layout_marginTop="@dimen/marginTop_createAccount"
-               app:hintTextColor="@color/white">
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/editTexBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Usuario"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:hint="@string/confirmar_contrase_a"
-                   android:inputType="text"
-                   android:textColor="@color/white"/>
-           </com.google.android.material.textfield.TextInputLayout>
-           <Button
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:text="Unete"
-               android:layout_marginTop="@dimen/login_MarginTop"/>
+            <!-- Contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/editTexBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="none"
+                android:layout_marginTop="16dp">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/editTexBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-       </LinearLayout>
+            <!-- Confirmar Contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/editTexBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="none"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/editTexBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Confirmar contraseña"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Botón Únete -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Únete"
+                android:textColor="@android:color/black"
+                android:backgroundTint="@android:color/darker_gray"
+                android:layout_marginTop="24dp"/>
+
+        </LinearLayout>
 
     </ScrollView>
 
