@@ -13,5 +13,7 @@
     <color name="editText_white">#FFFFFF</color>
     <color name="editText_black">#000000</color>
     <color name="editText_textColor">#FFFFFF</color>
+    <color name="background_cardview">#80000000</color>
+
 
 </resources>
