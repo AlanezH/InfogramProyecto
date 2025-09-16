@@ -14,4 +14,6 @@
     <string name="ji_hoon">Ji-hoon</string>
     <string name="hace_cardview">hace</string>
     <string name="dias_viewcard">dias</string>
+    <string name="buscar_item">Buscar</string>
+    <string name="yo_item">YO</string>
 </resources>

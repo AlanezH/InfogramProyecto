@@ -10,4 +10,7 @@
     <dimen name="corner_radius_cardview">20dp</dimen>
     <dimen name="margin_cardview">10dp</dimen>
     <dimen name="padding_cardview">10dp</dimen>
+    <dimen name="paddingBottom_container">10dp</dimen>
+    <dimen name="height_bottom_navegation_view">70dp</dimen>
+    <dimen name="margin_fab">30dp</dimen>
 </resources>
